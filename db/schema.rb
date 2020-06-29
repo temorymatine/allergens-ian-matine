@@ -25,15 +25,15 @@ ActiveRecord::Schema.define(version: 2020_06_29_143754) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "recipeingredients", force: :cascade do |t|
-    t.integer "recipe_id"
-    t.integer "ingredient_id"
+  create_table "recipes", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "recipes", force: :cascade do |t|
-    t.string "name"
+  create_table "recipes_ingredients", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.integer "ingredient_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

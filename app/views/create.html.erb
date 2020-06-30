@@ -1,0 +1,8 @@
+<h1>Create a new recipe</h1>
+
+<%= form_for @recipe do |f| %> 
+<div class ="field"> 
+  <%= f.label :user_id, "user name" %> 
+  <%= f.collection_select :user_id , User.order(:name), :id , :name, include_blank: true %>
+<%end%>
+
